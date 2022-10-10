@@ -1,1 +1,1 @@
-Please visit my personal webpage at radim.wz.cz
+Please visit my personal webpage at http://www.radim.wz.cz
