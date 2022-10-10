@@ -1,0 +1,145 @@
+// === IMPORTS === //
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/breakpoints";
+@import "./partials/buttons";
+
+// ======== BASIC SETTINGS ====== //
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 30px auto;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 1000px;
+}
+
+header {
+    // background-color: pink;
+    height: 250px;
+
+    .profile-picture img {
+        width: 240px;
+        height: auto;
+        border-radius: 50% 50%;
+        border: 5px solid black;
+        // margin: 10px
+    }
+
+    #name {
+        font-size: 4rem;
+        text-align: center;
+        padding-left: 0;
+        font-style: italic;
+    }
+
+    .box-inner {
+        display: block;
+        width: 750px;
+        
+        .box-header {
+            // margin: 0 auto;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+        }
+    
+        p {
+            text-align: center;
+            margin: 0.5rem;
+        }
+    }
+}
+
+.columns {
+    display: flex;
+    // background-color: lightblue;
+}
+
+.left-box {
+    display: block;
+    width: 250px;
+    // background-color: lightgreen;
+
+    h1 {
+        margin-bottom: 0.8rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    .box {
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        
+        p {
+            margin: 0.5rem;
+            margin-bottom: 0.8rem;    
+        }
+    }
+}
+
+.languages, .hobbies {
+    text-align: center;
+}
+
+.right-box {
+    width: 750px;
+    // background-color: lightseagreen;
+    padding-left: 3rem;
+    border-left: 1px solid black;
+    // border-top: 1px solid black;
+    .profile {
+        border-top: 1px solid black;
+        padding-top: 3rem;
+        margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0.3rem;
+        padding-left: 2.15rem + 1.5rem + 0.6rem;
+    }
+}
+
+
+section {
+    margin-top: 3rem;
+    // margin-left: 0.7rem;
+}
+
+h1 {
+    @include H1-cv;
+}
+
+h2 {
+    @include H2-cv;
+}
+
+.datum {
+    @include datum;
+}
+
+
+.cv-icons {
+    @include cv-icons;
+}
+
+.box {
+    display: flex;
+    align-items:center;
+    padding-bottom: 0.5rem;
+ }
+
+ .box-h2 {
+    display: flex;
+    align-items: center;
+    padding-left: 2.15rem;
+ }
+
+ a {
+    text-decoration: none;
+    color: black;
+ }

@@ -1,0 +1,48 @@
+// === MEDIA QUERIES === //
+
+/*
+   0 -  600px => Extra small devices (phones)
+
+ 600 -  768px => Small devices (portrait tablets and large phones)
+
+ 769 -  992px => Medium devices (landscape tablets)
+
+ 993 - 1200px => Large devices (laptops/desktops)
+
+1200 -   more => Extra large devices (large laptops and desktops)
+*/
+
+// 1em = 16px
+
+@mixin respond($breakpoint) {
+    // Phone
+	@if $breakpoint == phone {
+    	@media (max-width: 599px) {
+    		@content;
+    	}
+    }
+    // Tablet portrait
+    @if $breakpoint == portrait-tablet {
+    	@media (min-width: 600px) {
+    		@content;
+    	}
+    }
+    // Tablet landscape
+    @if $breakpoint == landscape-tablet {
+    	@media (min-width: 768px) {
+    		@content;
+    	}
+    }
+    // Screen
+    @if $breakpoint == laptop {
+    	@media (min-width: 992px) {
+    		@content;
+    	}
+    }
+	// Wide screen
+    @if $breakpoint == wide-laptop {
+    	@media (min-width: 1800px) {
+    		@content;
+        }
+    }
+}

@@ -1,0 +1,312 @@
+// === IMPORTS === //
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/breakpoints";
+@import "./partials/buttons";
+
+// ======== BASIC SETTINGS ====== //
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    @include H1;
+}
+
+// ======== HERO section ====== //
+
+#hero {
+    position: relative;
+    background-image: url("./pictures/simon-abrams-k_T9Zj3SE8k-unsplash.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .profile-picture {
+        background-image: url(./pictures/profile-picture.jpg);
+        position: absolute;
+        margin: 0 auto;
+        width: 170px;
+        height: 170px;
+        border-radius: 50% 50%;
+        border: 4px solid rgb(22, 20, 20);
+        background-size: cover;
+        background-position: center;
+        top: 22%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-header-highlight {
+        color: $titleSecondaryColor;
+    }
+
+    #hero-header {
+        position: absolute;
+        width: 95vw;
+        color: $titlePrimaryColor;
+        font-size: 1.1em;
+        top: 58%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h1 {
+            margin: 0.5em;
+            color: $titlePrimaryColor;
+        }
+
+        @include respond(portrait-tablet) {
+            font-size: 1.3em;
+        }
+
+        @include respond(landscape-tablet) {
+            font-size: 1.5em;
+        }
+
+        @include respond(laptop) {
+            font-size: 1.5em;
+
+            p {
+                padding: 0px 20%;
+            }
+        }
+    }   
+}
+
+
+/* ======== ABOUT ME section ======*/
+
+#about-me {
+    // border: 1px dashed black;
+    margin: 20px;
+    padding-top: 60px;
+    line-height: 1.5;
+    @include respond(landscape-tablet) {
+        h1 {
+            margin: 20px;
+        }
+    }
+
+    @include respond(laptop) {
+        margin: 0 10%;
+    }
+
+    @include respond(wide-laptop) {
+        margin: 0 20%;
+    }
+
+    .about-me--wrp {
+    	position: relative;
+    	// border: 1px dashed black;
+        
+        @include respond(laptop) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-me--text {
+            // border: 1px dashed black;
+            width: 100%;
+            height: auto;
+            
+            @include respond(landscape-tablet) {
+                padding: 0 50px;
+                width: auto;
+            }
+        }
+
+        .wrapper-pictures {
+            @include respond(landscape-tablet) {
+                display: flex;
+                justify-content: center;
+            }
+
+            @include respond(laptop) {
+                display: block;
+                justify-content: center;
+            }
+        }
+
+        .about-me--picture img {
+            height: 250px;
+            width: 100%;
+            // border: 1px dashed black;
+            border-radius: 15px;
+            margin-top: 20px;
+            object-fit: contain;
+        }
+        
+        .social-media-icons {
+            // border: 1px dashed black;
+            display: flex;
+            max-height: 50px;
+            max-width: 430px;
+            justify-content: space-evenly;
+        }
+    
+        .button-container {
+            // border: 1px dashed black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            height: 50px;
+        }
+    
+        .soc-med-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50% 50%;
+            max-height: 50px;
+            margin: 0 10px;
+        }
+    }
+}
+
+/* ======== PROJECTS section ======*/
+#projects {
+    // border: 1px dashed black;
+    margin: 20px;
+    padding-top: 60px;
+    line-height: 1.5;
+    @include respond(landscape-tablet) {
+        h1 {
+            margin: 20px;
+        }
+    }
+
+    @include respond(laptop) {
+        margin: 0 10%;
+    }
+
+    @include respond(wide-laptop) {
+        margin: 0 20%;
+    }
+
+    .about-me--wrp {
+    	position: relative;
+        margin-bottom: 70px;
+    	// border: 1px dashed black;
+        
+        @include respond(laptop) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-me--text {
+            // border: 1px dashed black;
+            width: 100%;
+            height: auto;
+            a {
+                text-decoration: none;
+            }
+            
+            @include respond(landscape-tablet) {
+                padding: 0 50px;
+                width: 50%;
+            }
+        }
+
+        .wrapper-pictures {
+            @include respond(landscape-tablet) {
+                display: flex;
+                justify-content: center;
+            }
+
+            @include respond(laptop) {
+                display: block;
+                justify-content: center;
+            }
+        }
+
+        .about-me--picture img {
+            height: 100%;
+            width: 100%;
+            max-width: 600px;
+            // border: 1px dashed black;
+            margin-top: 20px;
+            object-fit: contain;
+            box-shadow: #e9877b;
+        }
+        
+        .social-media-icons {
+            // border: 1px dashed black;
+            display: flex;
+            max-height: 50px;
+            max-width: 430px;
+            justify-content: space-evenly;
+        }
+    
+        .button-container {
+            // border: 1px dashed black;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            height: 50px;
+        }
+    
+        .soc-med-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50% 50%;
+            max-height: 50px;
+            margin: 0 10px;
+        }
+    }
+}
+
+.projects-icons {
+    width: 100px;
+    height: auto;
+    max-height: 50px;
+}
+
+
+/* ======== 8th section FOOTER ======*/
+
+.footer {
+   background-color: $primaryColor;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 30px;
+}
+
+.footer h6 {
+   margin: 15px;
+   font-weight: 400;
+}
+
+.footer a {
+   font-size: 1.25em;
+}
+
+/* unvisited link */
+.footer a:link {
+   color: #efa69d;
+}
+ 
+/* visited link */
+.footer a:visited {
+   color: #efa69d;
+}
+ 
+/* mouse over link */
+.footer a:hover {
+   color: #e9877b;
+}
+ 
+/* selected link */
+.footer a:active {
+   color: goldenrod;
+}

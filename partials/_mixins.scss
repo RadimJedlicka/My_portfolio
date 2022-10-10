@@ -1,0 +1,47 @@
+@import "./variables";
+
+@mixin H1 {
+    font-size: 2em;
+    color: $primaryColor;
+    text-align: center; 
+    margin: 0;
+}
+
+@mixin H1-cv {
+    font-size: 1.5rem;
+    color: black;
+    text-align: left; 
+    margin: 0;
+    padding-left: 0.65rem;
+    text-transform: capitalize;
+    vertical-align: text-bottom;
+}
+
+@mixin H2-cv {
+    font-size: 1rem;
+    color: black;
+    text-align: left; 
+    margin: 0;
+    padding: 10px;
+    // padding-left: 44px;
+}
+
+@mixin datum {
+    font-size: 0.8rem;
+    color: rgb(126, 126, 126);
+    text-align: left; 
+    margin: 0;
+    padding: 0px 10px;
+    // padding-left: 2.15rem + 1.5rem + 0.6rem;
+}
+
+@mixin cv-icons {
+    display: inline-block;
+    height: 1.2rem;
+    width: auto;
+    vertical-align: bottom;
+    // padding: 30px 0px 0px 10px;
+}
+
+
+
